@@ -1,0 +1,22 @@
+{
+  "name": "webpack-dev-hapi-plugin",
+  "version": "0.0.1",
+  "description": "webpack dev plugin for hapi",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "boom": "^3.0.0",
+    "memory-fs": "~0.2.0",
+    "mime": "^1.3.4"
+  },
+  "keywords": [
+    "plugin",
+    "webpack",
+    "webpack-dev",
+    "hapi"
+  ],
+  "author": "Luis De Leon",
+  "license": "ISC"
+}
