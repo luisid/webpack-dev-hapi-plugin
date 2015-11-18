@@ -148,7 +148,14 @@ module.exports = function (compiler, options) {
 			method: 'GET',
 			path: options.publicPath + '{filename}',
 			handler: function (request, reply) {
-				var filename = getFilenameFromUrl(request.url.path);
+				var path, 
+					index = request.url.path.indexOf(options.publicPath);
+				
+				if (index >= 0) {
+					path = request.url.path.substring(index);	
+				}
+				
+				var filename = getFilenameFromUrl(path);
 				if (filename === false) return reply(Boom.notFound());
 				
 				// in lazy mode, rebuild on bundle request
